@@ -56,43 +56,14 @@ for x in expression:
 if buffer != "":
     expression_decoupee.append(int(buffer))
 
-print(expression_decoupee)
-
-"""i = 0
+i = 0
 while i < len(expression_decoupee):
-    if expression_decoupee[i] == "/":
-        p = [1 ,2 ,3 ,4]
-        p[0] = i #Parenthèse 1 / 4
-        paren = 0
-        while (p[0]>1 and expression_decoupee[p[0]] != "+" and expression_decoupee[p[0]] != "-" and paren >= 0) or paren>0:
-            p[0] -= 1
-            if expression_decoupee[p[0]] == ")":
-                paren += 1
-            elif expression_decoupee[p[0]] == "(":
-                paren -= 1
-        p[1] = i #Parenthèse 2 / 4
-        p[2] = i+1 #Parenthèse 3 / 4
-        p[3] = i+1 #Parenthèse 4 / 4
-        paren = 0
-        while (p[3]<len(expression_decoupee)-1 and paren == 0 and (expression_decoupee[p[3]] != "+" or expression_decoupee[p[3]] != "-")) or paren < 0:
-            p[3] += 1
-            if expression_decoupee[p[3]] == ")":
-                paren += 1
-            elif expression_decoupee[p[3]] == "(":
-                paren -= 1
-        for y in range(len(p)):
-            p[y]+=y
-        expression_decoupee.insert(p[0]+1, "(")
-        expression_decoupee.insert(p[1], ")")
-        expression_decoupee.insert(p[2], "(")
-        expression_decoupee.insert(p[3]+1, ")")
-        i += 4
+    if expression_decoupee[i] == "-" and type(expression_decoupee[i+1]) != str:
+        expression_decoupee[i+1] *= -1
+        expression_decoupee[i] = "+"
     i += 1
 
-txt = ""
-for chose in expression_decoupee:
-    txt += str(chose)
-print(txt)"""
+print(expression_decoupee)
 
 i=0
 while i < len(expression_decoupee):
