@@ -1,0 +1,99 @@
+:root {
+	background-color: #AAAAAA;
+}
+
+body#body {
+	margin: 0px;
+	padding: 0px;
+}
+
+div#entete {
+	margin: 0px;
+	padding: 0px;
+	height: 10vh;
+	width: 100vw;
+	background-color: #333333;
+	display: table;
+}
+
+div#corps {
+	margin: 0px;
+	padding: 0px;
+	height: 90vh;
+	width: 100vw;
+}
+
+div#page {
+	margin: 0px;
+	padding: 0px;
+}
+
+.espace {
+	margin: 0px;
+	padding: 0px;
+	height: 1px;
+}
+
+div#article {    
+	margin: 2rem;
+    border: 2px solid #aa5306;
+    height: 2.5rem;
+	background-color: #ffffff;
+}
+
+p#prix {
+	border: 2px solid red;
+	width: 4rem;
+	height: 1.3rem;
+	float: right;
+	text-align: center;
+}
+
+img#logo {
+	height: 10vh;
+	width: 10vh;
+}
+
+.div2 {
+	margin-left: 80vw;
+	width: 10vw;
+	position: absolute;
+	top: 2vh;
+	right: 0px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+input#gros {
+	height: 50vh;
+	width: 100vw;
+	font-size: 12rem;
+}
+
+.bouton {	
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.bouton:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.bouton:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
