@@ -7,12 +7,24 @@
 </head>
 <body id="body">
 	<div class="page">
-		Se connecter:
-		<ol>
-		<li>Vendeur ou client?</li>
-		<li>Login?</li>
-		<li>Mot de passe?</li>
-		</ol>
+	<form action="co.php" method="post">
+	<fieldset>
+		<legend> La Légende sera légendaire </legend>
+		<br> Se créer un compte: <br><br>
+		
+		<label for="name">Login: </label>
+		<input type="text" name="login" required> <br><br>
+		
+		<label for="name">Mot de passe: </label>
+		<input type="password" name="mdp" required> <br><br>
+			
+		<input type="submit" name="name" required> 
+		
+		<input type="reset" name="name" required> <br>
+		
+	</fieldset>
+	</form>
+		
 	</div>
 </body>
 </html>

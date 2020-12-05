@@ -34,11 +34,23 @@ div#page {
 	height: 1px;
 }
 
-div#article {    
+.article {    
 	margin: 2rem;
     border: 2px solid #aa5306;
-    height: 2.5rem;
+	height: 2.98rem;
 	background-color: #ffffff;
+	position: relative;
+}
+
+p#quantite {
+	border: 2px solid green;
+	width: 8rem;
+	height: 1.3rem;
+	float: right;
+	text-align: center;
+	position: absolute;
+	right: 4.2rem;
+	bottom: -1rem;
 }
 
 p#prix {
@@ -47,11 +59,24 @@ p#prix {
 	height: 1.3rem;
 	float: right;
 	text-align: center;
+	position: absolute;
+	right: 0;
+	bottom: -1rem;
 }
 
 img#logo {
 	height: 10vh;
 	width: 10vh;
+}
+
+input#commander {
+	position: absolute;
+	right: 2rem;
+	bottom: auto;
+}
+
+div#commande {
+	height: auto;
 }
 
 .div2 {
@@ -65,10 +90,8 @@ img#logo {
 	flex-direction: column;
 }
 
-input#gros {
-	height: 50vh;
-	width: 100vw;
-	font-size: 12rem;
+.chiffres {
+	float: right;
 }
 
 .bouton {	

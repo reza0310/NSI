@@ -7,12 +7,29 @@
 </head>
 <body id="body">
 	<div class="page">
-		Se créer un compte:
-		<ol>
-		<li>Vendeur ou client?</li>
-		<li>Login?</li>
-		<li>Mot de passe?</li>
-		</ol>
+	<form action="kdo.php" method="post">
+	<fieldset>
+		<legend> La Légende sera légendaire </legend>
+		<br> Se créer un compte: <br><br>
+		
+		<label for="name">Login: </label>
+		<input type="text" name="login" required> <br><br>
+		
+		<label for="name">Mot de passe: </label>
+		<input type="password" name="mdp" required> <br><br>
+		
+		<label for="name">Adresse mail: </label>
+		<input type="text" name="mail" required> <br><br>
+		
+		<label for="name">Adresse physique: </label>
+		<input type="text" name="adresse" required> <br><br>
+		
+		<input type="submit" required> 
+		<input type="reset" required>
+		
+	</fieldset>
+	</form>
+		
 	</div>
 </body>
 </html>
