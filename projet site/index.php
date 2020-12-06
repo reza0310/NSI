@@ -6,7 +6,7 @@ $sqlPass='root';
 $link = mysqli_connect($sqlHost,$sqlUser,$sqlPass, "commerce") or die ('Erreur '.mysqli_connect_error());
 mysqli_set_charset ($link,"utf8");
 
-$rep = mysqli_query($link ,"SELECT * FROM articles");
+$rep = mysqli_query($link ,"SELECT * FROM articles WHERE NOT quantite = 0");
 $srt = "";
 while ($arr=mysqli_fetch_array($rep)) {
 	$srt .= "<div class='article'>$arr[1]<p id=\"prix\">$arr[4]€</p><p id=\"quantite\">Reste: $arr[2]</p></div>";

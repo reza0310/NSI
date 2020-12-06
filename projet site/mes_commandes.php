@@ -19,6 +19,6 @@ while ($commande=mysqli_fetch_array($requete_commandes)) {
 	}
 	$srt .= "</div>";
 }
-echo(str_replace('%php%', $srt, file_get_contents('main.html')));
+echo(str_replace('%php%', $srt, str_replace('%cache%', "<input type='hidden' name='login' value='$login'>", file_get_contents('main_alternatif.html'))));
 mysqli_close($link);
 ?>

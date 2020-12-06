@@ -75,6 +75,15 @@ input#commander {
 	bottom: auto;
 }
 
+.decal {
+    position: absolute;
+    right: 15rem;
+    top: 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 div#commande {
 	height: auto;
 }
