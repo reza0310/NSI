@@ -1,0 +1,6 @@
+En ce qui concerne les infos sur les jointures, je ne ferais pas mieux que ce site: https://sql.sh/cours/jointures
+En ce qui concerne mes exemples par contre, j'ai:
+1) On prends: pilotes(nom_pilote, age, license, _id_pilote_); avions(_immatriculation_, heures_de_vol, nom_avion); relations_pilotes_avions(#id_pilote, #immatriculation)
+SELECT nom_pilote, nom_avion FROM pilotes NATURAL JOIN relations_pilotes_avions NATURAL JOIN avions | retourne les couples (nom du pilote, nom de l'avion) pour tout couple pilote / avion
+2) On prends: clients_de_x(_nom_client_, argent_depense); clients_de_y(_nom_client_, argent_depense)
+SELECT * FROM clients_de_x INNER JOIN clients_de_y ON clients_de_x.key = clients_de_y.key | retourne les clients qui ont dépensé autant d'argent chez x que chez y
