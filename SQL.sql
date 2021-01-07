@@ -4,4 +4,4 @@ SELECT regions.nom, AVG(communes.population_2010/communes.surface) as "densité"
 SELECT DISTINCT departements.nom FROM departements JOIN communes ON departements.num_departement = communes.num_departement WHERE communes.nom LIKE "Petit%"
 
 SELECT * FROM communes WHERE population_2010 > 100*(SELECT avg(population_2010) FROM communes)
-SELECT nom FROM communes WHERE zmin > 940 
+SELECT nom FROM communes WHERE zmin > 940 OR zmin = 940 ORDER BY zmin ASC LIMIT 2
