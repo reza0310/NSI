@@ -1,4 +1,6 @@
-﻿class Noeud:
+import arbres
+
+class Noeud:
     def __init__(self, key, rank, exp):
         self.gauche=None
         self.droite=None
@@ -20,12 +22,19 @@
         else:
             self.droite = Noeud(self.exp[self.rank+1:],None,None)
 
-    def pprint(self, level=0):
+    def pprint(self, x, y, xmin, xmax):
+        #int((xmax-x)/2+x)
+        diff = int((xmax-xmin)/4)
         if self.droite:
-            self.droite.pprint(level+1)
-        print(f"{' '* 4 * level}{self.value}")
+            arbres.trait(x, y, x+diff, y+200)
         if self.gauche:
-            self.gauche.pprint(level+1)
+            arbres.trait(x, y, x-diff, y+200)
+        arbres.cercle(x, y, self.value, "rien")
+        if self.droite:
+            self.droite.pprint(x+diff, y+200, x, xmax)
+        if self.gauche:
+            self.gauche.pprint(x-diff, y+200, xmin, x)
+
 
     def calculer(self):
         if self.value == "+":
@@ -56,12 +65,13 @@ def prios(exp):
     return res
 
 Exp = input("Entrez l'expression ici: (Notez que les parenthèses ne fonctionnent pas encore...) ")
-#Exp = "5*2+3*2/3+5"
+#Exp = "5*2+3*2/3+5", "1*2*3+1*2*3+1*2*3"
 calculs = prios(Exp)
 if calculs:
     root = Noeud(calculs[0][0],calculs[0][1],Exp)
     root.developper()
-    root.pprint()
-    print(root.calculer())
+    root.pprint(int(arbres.taille("h")/2), 100, 0, arbres.taille("h"))
+    print("Résultat du calcul: ", root.calculer())
 else:
     print("Ce n'est même pas une expression... Donc forcément, le résultat est",Exp)
+input()
