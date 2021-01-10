@@ -538,13 +538,13 @@ void trait(long xun, long yun, long xdeux, long ydeux) {
 	int xdeb = min(xun, xdeux);
 	int xfin = max(xun, xdeux);
 	int ydeb = min(yun, ydeux);
-	int yfin = min(yun, ydeux);
+	int yfin = max(yun, ydeux);
 	for (int x = xdeb; x < xfin; x++) {
-		for (int y = ydeb - 2; y < ydeb + 2; y++) {
+		for (int y = yun - 2; y < yun + 2; y++) {
 			SetPixel(hdc, x, y, RGB(0, 0, 0));
 		}
 	}
-	for (int x = xfin - 2; x < xfin + 2; x++) {
+	for (int x = xdeux - 2; x < xdeux + 2; x++) {
 		for (int y = ydeb; y < yfin; y++) {
 			SetPixel(hdc, x, y, RGB(0, 0, 0));
 		}
